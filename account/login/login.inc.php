@@ -8,13 +8,9 @@
 
 			$query = "SELECT id FROM users WHERE `username`= $username AND `password` = $password ";
 
-			$Run_query = mysqli_query($connect, $query)
+			$Run_query = mysqli_query($connect, $query);
 
 		}
-	
-
-
-
 
 
 	}
@@ -36,8 +32,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body bgcolor="#C6CBC0">
-	<form  action="<?php echo htmlentities($_SERVER['PHP_SELF']) ;?>" methord="POST" >
-  <div class="container">
+    <form  action="<?php echo htmlentities($_SERVER['PHP_SELF']) ;?>" methord="POST" >
+    <div class="container">
         <div class="row">
             <div class="col-md-offset-5 col-md-3">
                 <div class="form-login">

@@ -3,7 +3,7 @@
 page 2
 </title>
 <style type="txt/css">
-h3: {color:red;}
+/* h3: {color:red;} */
 
 
 </style>

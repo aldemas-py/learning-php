@@ -1,7 +1,7 @@
 <?php
 
 
-$connect = mysqli_connect('localhost', 'root', '', 'get_updated');
+$connect = mysqli_connect('localhost', 'root', '', 'id');
 
 if($connect===false){
 	echo 'huuuuuuuuuu';

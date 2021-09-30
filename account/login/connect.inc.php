@@ -8,14 +8,14 @@ define('password', '');
 define('db', 'accounts');
 
 
-	$connect = mysqli_connect(host, user, password, db)
+	$connect = mysqli_connect(host, user, password, db);
 	if ($connect) {
 	echo "connection succesfull!";
 
 		}
 		else{
 
-			die("connection error" . mysql_connect_error());
+			die("connection error" . mysqli_connect_error());
 
 		}
 
