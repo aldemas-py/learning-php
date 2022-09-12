@@ -23,6 +23,8 @@ Route::get('/', function ()
 });
 
 Route::get('/post/{id}', function ($id) {
-    dd($id);
+//    debugging
+    // dd($id);
+    // ddd($id);
     return response('post ' . $id);
 })->where('id', '[0-9]+');
