@@ -18,18 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function ()
-{
-    return response('hello wold!');
-});
+// Route::get('/', function ()
+// {
+//     return response('hello wold!');
+// });
 
-Route::get('/post/{id}', function ($id) {
-//    debugging
-    // dd($id);
-    // ddd($id);
-    return response('post ' . $id);
-})->where('id', '[0-9]+');
+// Route::get('/post/{id}', function ($id) {
+// //    debugging
+//     // dd($id);
+//     // ddd($id);
+//     return response('post ' . $id);
+// })->where('id', '[0-9]+');
 
-Route::get('/search', function (Request $request) {
-dd($request->name .' ' . $request->citi);
-});
+// Route::get('/search', function (Request $request) {
+// dd($request->name .' ' . $request->citi);
+// });
