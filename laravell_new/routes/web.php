@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Listings;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,21 +37,22 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // development started
+//   All listings
+
 Route::get('/', function () {
     return view('listings', [
         'heading' => 'latest listings',
-        'listings' => [
-            [
-                'id' => 1,
-                'tittle' => 'Listing 1',
-                'description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, mollitia eaque ea autem non eligendi culpa quod suscipit in ipsam ducimus accusamus beatae veritatis vel, laborum voluptates aliquid! Delectus, dignissimos.'
-            ],
-            [
-                'id' => 2,
-                'tittle' => 'Listing 2',
-                'description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, mollitia eaque ea autem non eligendi culpa quod suscipit in ipsam ducimus accusamus beatae veritatis vel, laborum voluptates aliquid! Delectus, dignissimos.'
-            ]
-        ]
+        'listings' => Listing::all()
+
+
+    ]);
+});
+
+// Single Listing
+
+Route::get('/listings/{id}', function ($id) {
+    return view('listing', [
+        'listing' => Listing::find($id)
 
     ]);
 });
