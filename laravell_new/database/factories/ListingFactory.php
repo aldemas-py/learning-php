@@ -10,17 +10,18 @@ class ListingFactory extends Factory
      * Define the model's default state.
      *
      * @return array
-     */
+     * 
+     *      */
     public function definition()
     {
         return [
-            'tittle' => $this->faker->sentences(),
-            'tags' => 'laravel, backend ,api',
+            'title' => $this->faker->sentences(),
+            // 'tags' => 'api',
             'company' => $this->faker->company(),
             'email' => $this->faker->companyEmail(),
             'website' => $this->faker->url(),
             'location' => $this->faker->city(),
             'description' => $this->faker->paragraph(5)
-        ];
+    ];
     }
 }
