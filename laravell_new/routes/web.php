@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/', function ()
 // {
@@ -33,3 +33,23 @@ Route::get('/', function () {
 // Route::get('/search', function (Request $request) {
 // dd($request->name .' ' . $request->citi);
 // });
+
+// development started
+Route::get('/', function () {
+    return view('listings', [
+        'heading' => 'latest listings',
+        'listings' => [
+            [
+                'id' => 1,
+                'tittle' => 'Listing 1',
+                'description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, mollitia eaque ea autem non eligendi culpa quod suscipit in ipsam ducimus accusamus beatae veritatis vel, laborum voluptates aliquid! Delectus, dignissimos.'
+            ],
+            [
+                'id' => 2,
+                'tittle' => 'Listing 2',
+                'description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, mollitia eaque ea autem non eligendi culpa quod suscipit in ipsam ducimus accusamus beatae veritatis vel, laborum voluptates aliquid! Delectus, dignissimos.'
+            ]
+        ]
+
+    ]);
+});
