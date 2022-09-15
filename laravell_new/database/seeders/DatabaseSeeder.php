@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
         ]);
         listing::create([
             'tittle' => 'Frontend Engineer',
-            'tags' => 'laravel, backend ,api',
+            'tags' => 'javascript, backend ,api',
             'company' => 'Stark Industries',
             'location' => 'New York, NY',
             'email' => 'email2@email.com',
