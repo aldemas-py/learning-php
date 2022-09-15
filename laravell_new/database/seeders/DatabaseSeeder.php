@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         // Listing::factory(6)->create();
 
         listing::create([
-            'tittle' => 'Laravel Senior Developer',
+            'title' => 'Laravel Senior Developer',
             'tags' => 'laravel, javascript',
             'company' => 'Acme Corp',
             'location' => 'Boston, MA',
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
         ]);
         listing::create([
-            'tittle' => 'Full-Stack Engineer',
+            'title' => 'Full-Stack Engineer',
             'tags' => 'laravel, backend ,api',
             'company' => 'Stark Industries',
             'location' => 'New York, NY',
@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
         ]);
         listing::create([
-            'tittle' => ' Senior  backend Developer',
+            'title' => ' Senior  backend Developer',
             'tags' => 'laravel, javascript',
             'company' => 'Acme Corp',
             'location' => 'Boston, MA',
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?'
         ]);
         listing::create([
-            'tittle' => 'Frontend Engineer',
+            'title' => 'Frontend Engineer',
             'tags' => 'javascript, backend ,api',
             'company' => 'Stark Industries',
             'location' => 'New York, NY',
