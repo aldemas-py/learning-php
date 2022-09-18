@@ -9,7 +9,11 @@ class listing extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $fillable = ['title', 'company', 'location', 'website', 'email', 'tags', 'description'];
+=======
+    // protected $fillable = ['title', 'company', 'location', 'website', 'email', 'tags', 'description'];
+>>>>>>> 0e69cbf05cb565d32c87e1b2764e1b87312c1e30
 
     public function scopeFilter($query, array $filters)
     {
