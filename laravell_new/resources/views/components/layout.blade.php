@@ -47,11 +47,11 @@
                         >
                     </li>
                     <li>
-                        <form action="POST" class="inline" action="/logout">
+                        <form class="inline" action="/logout" method="POST">
                             @csrf
-                            <button type="submit"></button>
+                            <button type="submit">
                             <i class="fa-solid fa-door-closed"></i>
-                            Logout
+                            Logout</button>
                         </form>
                     </li>
                 @else
