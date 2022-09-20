@@ -48,7 +48,7 @@
             </ul>
         </nav>
         {{--VIEW OUTPUT--}}
-        
+        <main>
         {{$slot}}
         </main>
 

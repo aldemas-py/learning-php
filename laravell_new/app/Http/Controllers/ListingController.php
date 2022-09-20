@@ -29,7 +29,8 @@ class ListingController extends Controller
     {
         return view('listings.create');
     }
-    // store create data
+
+    // Store Listing Data
     public function store(Request $request)
     {
         // dd($request->file('logo'));
@@ -51,5 +52,34 @@ class ListingController extends Controller
 
 
         return redirect('/')->with('message', 'Listing created Successfuly!');
+    }
+
+    // Update Listing Data
+    public function update(Request $request, listing $listing)
+    {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'company' => 'required',
+            'location' => 'required',
+            'website' => 'required',
+            'email' => ['required', 'email'],
+            'tags' => 'required',
+            'description' => 'required'
+        ]);
+
+        if ($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        $listing->update($formFields);
+
+
+        return back()->with('message', 'Listing updated Successfuly!');
+    }
+
+    // Show Edit Form
+    public function edit(Listing $listing)
+    {
+        return view('listings.edit', ['listing' => $listing]);
     }
 }
