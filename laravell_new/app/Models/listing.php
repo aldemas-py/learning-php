@@ -23,4 +23,11 @@ class listing extends Model
                 ->orwhere('company', 'like', '%' . request('search') . '%');
         }
     }
+
+    //Relationship To User
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
